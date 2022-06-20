@@ -12,7 +12,7 @@ export default function App() {
 
     const [second, setSecond] = React.useState(0);
     const [minute, setMinute] = React.useState(0);
-    const [bestTime, setBestTime] = React.useState(() => JSON.parse(localStorage.getItem("bestTime")))
+    const [bestTime, setBestTime] = React.useState(() => JSON.parse(localStorage.getItem("bestTime"))|| "00:00")
 
     React.useEffect(() => {
         const allHeld = dice.every(die => die.isHeld)
